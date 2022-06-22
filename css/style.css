@@ -1,0 +1,582 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
+
+:root {
+    --bg-standOut: hsl(7, 99%, 70%);
+    --bg-transform: hsl(51, 100%, 49%);
+    --graphic-desaign: hsl(167, 40%, 24%);
+    --photographic-text: hsl(198, 62%, 26%);
+    --footer: hsl(168, 34%, 41%);
+    --header-text: hsl(212, 27%, 19%);
+    --paragraf: hsl(213, 9%, 39%);
+    --text: hsl(232, 10%, 55%);
+    --color: hsl(210, 4%, 67%);
+    --primary: hsl(0, 0%, 100%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    overflow-x: hidden;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    background-image: url("../images/desktop/image-header.jpg");
+}
+
+main nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    font-family: 'Barlow', sans-serif;
+}
+
+main nav .submenu {
+    margin-right: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 35%;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+main nav .submenu button {
+    border: none;
+    padding: 1em 2em;
+    border-radius: 20px;
+    background-color: var(--primary);
+    color: var(--header-text);
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: 500ms;
+}
+
+main nav .submenu button:hover {
+    color: var(--primary);
+    cursor: pointer;
+    background-color: lightskyblue;
+}
+
+main nav .mobile {
+    display: none;
+}
+
+main header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 0;
+    font-family: 'Fraunces', serif;
+}
+
+main header h1 {
+    font-size: 3em;
+    letter-spacing: .1em;
+    color: var(--primary);
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+main header img {
+    margin-top: 4em;
+}
+
+main .brand {
+    margin-top: 25.2vh;
+    display: grid;
+    grid-template-areas:
+        "textTransform transform"
+        "standOut textStandOut"
+        "graphic photo"
+    ;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+main .brand .transform {
+    grid-area: textTransform;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20%;
+    height: 45vh;
+}
+
+main .brand .transform h1 {
+    color: var(--header-text);
+    font-size: 3em;
+}
+
+main .brand .transform p {
+    margin-top: -1em;
+    font-size: .9em;
+    color: var(--text);
+}
+
+main .brand .transform button {
+    margin: auto;
+    margin-left: 0;
+    padding: 0.5em 1em;
+    border: none;
+    background: linear-gradient(0deg, var(--bg-transform), var(--primary) 20%);
+    border-radius: 20px;
+    color: var(--header-text);
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 500ms;
+}
+
+main .brand .transform button:hover {
+    cursor: pointer;
+    background: linear-gradient(0deg, var(--bg-transform), var(--primary) 50%);
+}
+
+main .brand .imgTransform {
+    grid-area: transform;
+    width: 50vw;
+    height: 45vh;
+}
+
+main .brand .imgTransform img {
+    width: 50vw;
+}
+
+main .brand .imgTransform img:nth-child(2) {
+    display: none;
+}
+
+main .brand .standOut {
+    grid-area: textStandOut;
+    width: 35vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20%;
+    height: 45vh;
+}
+
+main .brand .standOut h1 {
+    color: var(--header-text);
+    font-size: 2.5em;
+}
+
+main .brand .standOut p {
+    color: var(--text);
+    font-size: .9em;
+    margin-top: -.9em;
+}
+
+main .brand .standOut button {
+    margin: auto;
+    margin-left: 0;
+    margin-top: 0;
+    padding: 0.5em 1em;
+    border: none;
+    background: linear-gradient(0deg, var(--bg-standOut), var(--primary) 20%);
+    border-radius: 20px;
+    color: var(--header-text);
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 500ms;
+}
+
+main .brand .standOut button:hover {
+    cursor: pointer;
+    background: linear-gradient(0deg, var(--bg-standOut), var(--primary) 40%);
+}
+
+main .brand .standOutImg {
+    grid-area: standOut;
+    width: 50vw;
+    height: 45vh;
+}
+
+main .brand .standOutImg img {
+    width: 50vw;
+}
+
+main .brand .standOutImg img:nth-child(2) {
+    display: none;
+}
+
+main .brand .graphic {
+    grid-area: graphic;
+    width: 50vw;
+    background-image: url("../images/desktop/image-graphic-design.jpg");
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+
+main .brand .photo {
+    grid-area: photo;
+    width: 50vw;
+    height: 80vh;
+    background-image: url("../images/desktop/image-photography.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+
+main .brand .graphic .teks,
+main .brand .photo .teks {
+    text-align: center;
+    width: 50%;
+    font-family: 'Fraunces', serif;
+}
+
+main .brand .graphic .teks h1 {
+    color: var(--graphic-desaign);
+    font-weight: 900;
+}
+
+main .brand .graphic .teks p {
+    color: var(--graphic-desaign);
+    font-weight: 700;
+    font-size: .8em;
+}
+
+main .brand .photo .teks h1 {
+    color: var(--photographic-text);
+    font-weight: 900;
+}
+
+main .brand .photo .teks p {
+    color: var(--photographic-text);
+    font-weight: 700;
+    font-size: .75em;
+}
+
+main .testi {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5em;
+}
+
+main .testi h2 {
+    font-family: 'Fraunces', serif;
+    color: var(--color);
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    margin-bottom: 2em;
+    font-weight: 700;
+}
+
+main .testi .person {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90vw;
+    gap: 1em;
+}
+
+main .testi .person .emilie,
+main .testi .person .thomas,
+main .testi .person .jennie {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 30vw;
+}
+
+main .testi .person img {
+    width: 20%;
+    border-radius: 50%;
+}
+
+main .testi .person p {
+    color: var(--paragraf);
+    font-family: 'Barlow', sans-serif;
+    font-size: 1.1em;
+}
+
+main .testi .person .nama {
+    line-height: .7em;
+}
+
+main .testi .person .nama h2 {
+    color: var(--header-text);
+    font-size: 1em;
+    margin: auto;
+    margin-top: 2em;
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+}
+
+main .testi .person .nama p {
+    color: var(--color);
+    font-size: 1em;
+    font-family: 'Barlow', sans-serif;
+}
+
+main .galery {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+}
+
+main .galery img {
+    width: 25vw;
+}
+
+main .galeryMob {
+    display: none;
+}
+
+main footer {
+    width: 100vw;
+    text-align: center;
+    background-color: var(--footer);
+    padding: 2em 0;
+}
+
+main footer h1 {
+    color: var(--graphic-desaign);
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+}
+
+main footer .ket {
+    font-family: 'Barlow', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 25vw;
+    margin: auto;
+    margin-bottom: 2em;
+    color: var(--photographic-text);
+}
+
+main footer .ket p {
+    transition: 500ms;
+}
+
+main footer .ket p:hover {
+    cursor: pointer;
+    color: var(--primary);
+}
+
+main footer .icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    width: 10vw;
+    color: var(--photographic-text);
+}
+
+main footer .icon i {
+    transition: 500ms;
+}
+
+main footer .icon i:hover {
+    cursor: pointer;
+    color: var(--primary);
+}
+
+@media screen and (max-width: 576px) {
+    main {
+        background-image: url("../images/mobile/image-header.jpg");
+    }
+
+    main nav .submenu {
+        display: flex;
+        position: absolute;
+        top: 3em;
+        right: -.5em;
+        width: 88vw;
+        height: 40vh;
+        padding: 10% 0;
+        flex-direction: column;
+        background-color: var(--primary);
+        color: var(--text);
+        font-size: 1.2em;
+        clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 100%, 0 8%, 87% 8%);
+    }
+
+    main nav .submenu[data-muncul="no"] {
+        display: none;
+    }
+
+    main nav .submenu button {
+        background-color: var(--bg-transform);
+        padding: 1.1em 2em;
+    }
+
+    main nav .mobile {
+        display: block;
+    }
+
+    main header h1 {
+        text-align: center;
+        font-size: 2em;
+        letter-spacing: .2em;
+    }
+
+    main .brand {
+        grid-template-areas:
+            "transform"
+            "textTransform"
+            "standOut"
+            "textStandOut"
+            "graphic"
+            "photo"
+        ;
+        margin-top: 8vh;
+        grid-template-columns: 1fr;
+    }
+
+    main .brand .transform {
+        width: 90vw;
+        padding: 0;
+        margin: auto;
+        margin-bottom: 2em;
+        text-align: center;
+    }
+
+    main .brand .transform h1 {
+        font-size: 2.5em;
+    }
+
+    main .brand .transform p {
+        font-size: 1.2em;
+    }
+
+    main .brand .transform button {
+        margin: auto;
+    }
+
+    main .brand .imgTransform,
+    main .brand .imgTransform img {
+        width: 100%;
+    }
+
+    main .brand .imgTransform img:nth-child(1) {
+        display: none;
+    }
+
+    main .brand .imgTransform img:nth-child(2) {
+        display: block;
+    }
+
+    main .brand .standOut {
+        width: 90%;
+        padding: 0;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 2em;
+    }
+
+    main .brand .standOut p {
+        font-size: 1.2em;
+    }
+
+    main .brand .standOut button {
+        margin: auto;
+    }
+
+    main .brand .standOutImg {
+        width: 100%;
+    }
+
+    main .brand .standOutImg img {
+        width: 100%;
+    }
+
+    main .brand .standOutImg img:nth-child(1) {
+        display: none;
+    }
+
+    main .brand .standOutImg img:nth-child(2) {
+        display: block;
+    }
+
+    main .brand .graphic {
+        width: 100vw;
+        background-image: url("../images/mobile/image-graphic-design.jpg");
+        height: 70vh;
+    }
+
+    main .brand .photo {
+        width: 100vw;
+        background-image: url("../images/mobile/image-photography.jpg");
+        height: 70vh;
+    }
+
+    main .brand .graphic .teks,
+    main .brand .photo .teks {
+        width: 90%;
+        padding: 2em 0;
+    }
+
+    main .testi {
+        width: 90vw;
+        margin: auto;
+        margin-top: 2em;
+        text-align: center;
+    }
+
+    main .testi h2 {
+        font-size: 1.3em;
+    }
+
+    main .testi .person {
+        flex-direction: column;
+    }
+
+    main .testi .person .emilie,
+    main .testi .person .thomas,
+    main .testi .person .jennie {
+        width: 90%;
+        margin-bottom: 2em;
+    }
+
+    main .testi .person p {
+        font-size: 1em;
+    }
+
+    main .galery {
+        display: none;
+    }
+
+    main .galeryMob {
+        display: block;
+        display: grid;
+        width: 100vw;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    main .galeryMob img {
+        width: 50vw;
+    }
+
+    main footer .ket {
+        width: 80vw;
+    }
+
+    main footer .icon {
+        width: 45vw;
+    }
+}
